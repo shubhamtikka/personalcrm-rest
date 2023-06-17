@@ -28,5 +28,10 @@ public class AccountController {
     ) {
         return ResponseEntity.ok(accountService.authenticate(authRequestDto));
     }
+    @GetMapping("sayHello") // To test CORS
+    public ResponseEntity<String> authenticate() {
+        return ResponseEntity.ok("Hello world!!");
+    }
+
 
 }

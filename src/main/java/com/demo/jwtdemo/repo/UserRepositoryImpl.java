@@ -18,7 +18,6 @@ public class UserRepositoryImpl implements UserRepository{
     @Override
     public User addUser(User user) {
         userList.add(user);
-        System.out.println(user);
         return user;
     }
 
