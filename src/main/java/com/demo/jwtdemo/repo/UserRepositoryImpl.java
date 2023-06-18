@@ -25,4 +25,9 @@ public class UserRepositoryImpl implements UserRepository{
     public List<User> getAll() {
         return userList;
     }
+
+    @Override
+    public boolean userExists(String username) {
+        return userList.stream().filter(user -> user.getUsername().equals(username)).findFirst().isPresent();
+    }
 }

@@ -14,4 +14,5 @@ public interface UserRepository {
 
     public List<User> getAll();
 
+    public boolean userExists(String username);
 }

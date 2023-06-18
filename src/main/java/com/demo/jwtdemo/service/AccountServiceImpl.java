@@ -61,4 +61,9 @@ public class AccountServiceImpl implements AccountService{
                 .token(jwtToken)
                 .build();
     }
+
+    @Override
+    public boolean userExists(String username) {
+        return userRepository.userExists(username);
+    }
 }

@@ -6,6 +6,7 @@ import com.demo.jwtdemo.dto.RegisterRequestDto;
 import com.demo.jwtdemo.service.AccountService;
 import com.demo.jwtdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +17,12 @@ public class AccountController {
     AccountService accountService;
 
     @PostMapping("register")
-    public ResponseEntity<AuthenticationResponse> register(
+    public ResponseEntity<?> register(
             @RequestBody RegisterRequestDto registerRequestDto
     ) {
+        if (accountService.userExists(registerRequestDto.getEmailId())) {
+            return ResponseEntity.status(HttpStatus.CONFLICT).body("User already exists");
+        }
         return ResponseEntity.ok(accountService.register(registerRequestDto));
     }
 
