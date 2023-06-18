@@ -42,8 +42,6 @@ public class SecurityConfig {
                 .disable()
                 .authorizeHttpRequests()
                 .requestMatchers("api/v1/account/**")
-                //.authorizeRequests()  // Method Deprecated
-                //.antMatchers("api/v1/account/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
