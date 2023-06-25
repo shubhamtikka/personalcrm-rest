@@ -2,7 +2,6 @@ package com.demo.jwtdemo.repo;
 
 import com.demo.jwtdemo.model.User;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

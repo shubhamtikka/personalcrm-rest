@@ -4,7 +4,6 @@ import com.demo.jwtdemo.dto.AuthenticationRequestDto;
 import com.demo.jwtdemo.dto.AuthenticationResponse;
 import com.demo.jwtdemo.dto.RegisterRequestDto;
 import com.demo.jwtdemo.service.AccountService;
-import com.demo.jwtdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
